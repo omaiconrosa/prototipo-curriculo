@@ -1,38 +1,47 @@
 @import './global.css';
 
-body{display: grid;
-align-items: center;
-margin: 60px 120px 0px;
-}
-
-header {
-  margin: 0px auto;
-}
-
-.cabecalho {
-  width: 100%;
+.header {
+  padding: 40px 20px; /* se quiser adicionar um background, vai pegar em todo .header */
+  max-width: 1200px; /* pra parar de crescer indefinidamente */
+  margin: 0px auto; /* centralizar */
   display: flex;
-  gap: 30px;
-  align-items: center;
+  align-items: center; 
   justify-content: space-between;
 }
 
-.cabecalho h1{
-  white-space: nowrap;
+.header h1{
+  white-space: nowrap; /* não quebrar palavra */
   font-size: 3rem;
 }
 
-.navegacao-lista {
+.header-menu {
   display: flex;
-  gap: 30px;
-  justify-content: end;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.navegacao a {
+.header-menu a {
+  display: block; /* nos links, para melhor funcionamento do padding */ 
   text-decoration: none;
-  color: black;
-  font-size: 1.2rem;
+  color: #141414;
+  padding: 20px 10px;
+  font-size: 1.125rem;
 }
+
+@media (max-width: 800px) {
+  .header{
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .header-menu a {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }  
+}
+
 
 .perfil {
   /* object-fit: cover;
@@ -65,7 +74,7 @@ header {
 }
 
 .localizacao{
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
