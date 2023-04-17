@@ -4,7 +4,7 @@ body{
     color: #141414;
 }
 
-h1, h2, h3, p{
+h1, h2, h3, h4, h5, p{
     margin: 0px;
 }
 
@@ -17,4 +17,12 @@ ul{
 img{
    max-width: 100%;
    display: block; 
+}
+
+.subtitulo{
+    font-size: 8rem;
+    word-break: break-all;
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 4ch; /*ch é o caracter 0; tamanho maximo de 4 caracteres neste caso */
 }
