@@ -26,3 +26,10 @@ img{
     text-transform: uppercase;
     max-width: 4ch; /*ch é o caracter 0; tamanho maximo de 4 caracteres neste caso */
 }
+
+@media (max-width: 800px){
+    .subtitulo{
+        max-width: initial;
+        font-size: 4rem;
+    }
+}
